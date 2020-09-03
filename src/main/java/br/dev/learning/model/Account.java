@@ -1,14 +1,17 @@
 package br.dev.learning.model;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class Account {
 	
+	@Id
 	private Long id;
 	private Integer agency;
 	private Integer number;
 	private String owner;
+	
 	public Long getId() {
 		return id;
 	}
