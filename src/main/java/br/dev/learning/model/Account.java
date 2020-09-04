@@ -11,6 +11,7 @@ public class Account {
 	private Integer agency;
 	private Integer number;
 	private String owner;
+	private Double balance;
 	
 	public Long getId() {
 		return id;
@@ -35,6 +36,12 @@ public class Account {
 	}
 	public void setOwner(String owner) {
 		this.owner = owner;
+	}
+	public Double getBalance() {
+		return balance;
+	}
+	public void setBalance(Double balance) {
+		this.balance = balance;
 	}
 
 }
