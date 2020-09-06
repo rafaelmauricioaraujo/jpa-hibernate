@@ -1,12 +1,14 @@
 package br.dev.learning.model;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
 public class Account {
 	
-	@Id
+	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	private Integer agency;
 	private Integer number;
