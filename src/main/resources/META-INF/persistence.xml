@@ -8,6 +8,7 @@
     <persistence-unit name="Accounts">
         <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
         <class>br.dev.learning.model.Account</class>
+        <class>br.dev.learning.model.Trasanction</class>
 
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
