@@ -3,6 +3,7 @@ package br.dev.learning.model;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,7 +18,7 @@ public class Account {
 	private Integer number;
 	private String owner;
 	private Double balance;
-	@OneToMany(mappedBy = "account")
+	@OneToMany(mappedBy = "account", fetch = FetchType.EAGER)
 	private List<Transaction> transactions;
 	
 	public Long getId() {

@@ -14,7 +14,7 @@ public class TransactionReportTest {
 		EntityManagerFactory entityManagerFactory = Persistence.createEntityManagerFactory("Accounts");
 		EntityManager entityManager = entityManagerFactory.createEntityManager();
 		
-		String jpql = "select acc from Account acc";
+		String jpql = "select acc from Account acc left join fetch acc.transactions";
 		TypedQuery<Account> query = entityManager.createQuery(jpql, Account.class);
 		
 		List<Account> resultList = query.getResultList();
