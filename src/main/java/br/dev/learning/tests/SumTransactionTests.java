@@ -14,9 +14,6 @@ public class SumTransactionTests {
 		TransactionDao dao = new TransactionDao(entityManager);
 		
 		System.out.println("Avg: " + dao.getAvg());
-		
-		
-		
 	}
 
 }
